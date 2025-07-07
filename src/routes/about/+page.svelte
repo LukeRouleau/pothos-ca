@@ -9,38 +9,45 @@
 
 	const values = [
 		{
-			title: "Integrity & Transparency",
-			description: "We communicate early, often, and honestly. No surprises, no hidden agendas—just clear, direct collaboration that builds trust.",
-			icon: "✨"
+			title: 'Integrity & Transparency',
+			description:
+				'We communicate early, often, and honestly. No surprises, no hidden agendas—just clear, direct collaboration that builds trust.',
+			icon: '✨'
 		},
 		{
-			title: "Excellence",
-			description: "Senior talent leads every engagement, ensuring pragmatic yet elegant solutions that stand the test of time and scale.",
-			icon: "🎯"
+			title: 'Excellence',
+			description:
+				'Senior talent leads every engagement, ensuring pragmatic yet elegant solutions that stand the test of time and scale.',
+			icon: '🎯'
 		},
 		{
-			title: "Empowerment",
-			description: "We mentor internal teams, sharing knowledge and best practices that leave you stronger long after our engagement ends.",
-			icon: "🚀"
+			title: 'Empowerment',
+			description:
+				'We mentor internal teams, sharing knowledge and best practices that leave you stronger long after our engagement ends.',
+			icon: '🚀'
 		},
 		{
-			title: "Stewardship",
-			description: "We treat your codebase, data, and customers as if they were our own—with the utmost care and responsibility.",
-			icon: "🛡️"
+			title: 'Stewardship',
+			description:
+				'We treat your codebase, data, and customers as if they were our own—with the utmost care and responsibility.',
+			icon: '🛡️'
 		}
 	];
 
 	const achievements = [
-		{ number: "10+", label: "Years of Experience" },
-		{ number: "50+", label: "Projects Delivered" },
-		{ number: "4", label: "Continents Served" },
-		{ number: "100%", label: "Client Satisfaction" }
+		{ number: '10+', label: 'Years of Experience' },
+		{ number: '50+', label: 'Projects Delivered' },
+		{ number: '4', label: 'Continents Served' },
+		{ number: '100%', label: 'Client Satisfaction' }
 	];
 </script>
 
 <svelte:head>
 	<title>About Pothos Consulting & Advising</title>
-	<meta name="description" content="Learn about the mission, values, and leadership behind Pothos Consulting & Advising. Discover our commitment to excellence and partnership approach." />
+	<meta
+		name="description"
+		content="Learn about the mission, values, and leadership behind Pothos Consulting & Advising. Discover our commitment to excellence and partnership approach."
+	/>
 </svelte:head>
 
 <!-- Hero Section -->
@@ -51,13 +58,15 @@
 				<span class="badge-icon">🌿</span>
 				<span class="badge-text">Our Story</span>
 			</div>
-			
+
 			<h1 class="hero-title">
 				Rooted in Quality, <span class="gradient-text">Branching</span> into Innovation
 			</h1>
-			
+
 			<p class="hero-subtitle">
-				Founded by seasoned engineers and product leaders, Pothos Consulting & Advising exists to close the gap between idea and impact. We partner with organizations of every size to craft robust software and forward-thinking strategies that fuel sustainable growth.
+				Founded by seasoned engineers and product leaders, Pothos Consulting & Advising exists to
+				close the gap between idea and impact. We partner with organizations of every size to craft
+				robust software and forward-thinking strategies that fuel sustainable growth.
 			</p>
 		</div>
 	</div>
@@ -70,19 +79,24 @@
 			<div class="mission-text" class:mounted>
 				<h2>Our Mission</h2>
 				<p class="lead">
-					Like the resilient pothos vine that thrives in any environment, we adapt to your unique challenges while maintaining our unwavering commitment to excellence.
+					Like the resilient pothos vine that thrives in any environment, we adapt to your unique
+					challenges while maintaining our unwavering commitment to excellence.
 				</p>
 				<p>
-					We believe that exceptional software isn't just about clean code or cutting-edge technology—it's about understanding your business, your users, and your goals. Every line of code we write, every architecture we design, and every strategy we develop is guided by one simple principle: delivering measurable value that drives your success.
+					We believe that exceptional software isn't just about clean code or cutting-edge
+					technology—it's about understanding your business, your users, and your goals. Every line
+					of code we write, every architecture we design, and every strategy we develop is guided by
+					one simple principle: delivering measurable value that drives your success.
 				</p>
 			</div>
-			
+
 			<div class="mission-visual" class:mounted>
 				<div class="visual-card">
 					<div class="card-content">
 						<div class="quote-mark">"</div>
 						<blockquote>
-							Excellence is never an accident. It is always the result of high intention, sincere effort, and intelligent execution.
+							Excellence is never an accident. It is always the result of high intention, sincere
+							effort, and intelligent execution.
 						</blockquote>
 						<cite>— Our Founding Principle</cite>
 					</div>
@@ -105,7 +119,7 @@
 				These core principles guide every decision we make and every relationship we build.
 			</p>
 		</div>
-		
+
 		<div class="values-grid">
 			{#each values as value, i}
 				<div class="value-card" class:mounted style="animation-delay: {i * 150}ms">
@@ -136,7 +150,10 @@
 						<h3>Jordan Green</h3>
 						<p class="leader-title">Founder & Principal Consultant</p>
 						<p class="leader-bio">
-							A former Fortune-100 principal engineer turned startup CTO, Jordan brings over a decade of experience building and scaling engineering teams across four continents. He's helped launch dozens of digital products, from early-stage MVPs to enterprise-scale platforms serving millions of users.
+							A former Fortune-100 principal engineer turned startup CTO, Jordan brings over a
+							decade of experience building and scaling engineering teams across four continents.
+							He's helped launch dozens of digital products, from early-stage MVPs to
+							enterprise-scale platforms serving millions of users.
 						</p>
 						<div class="leader-expertise">
 							<h4>Expertise:</h4>
@@ -150,7 +167,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="achievements-panel" class:mounted>
 				<h3>By the Numbers</h3>
 				<div class="achievements-grid">
@@ -161,7 +178,7 @@
 						</div>
 					{/each}
 				</div>
-				
+
 				<div class="credentials">
 					<h4>Credentials & Experience</h4>
 					<ul>
@@ -183,9 +200,10 @@
 			<div class="culture-text" class:mounted>
 				<h2>Our Approach</h2>
 				<p class="lead">
-					We don't just build software—we build partnerships. Our collaborative approach ensures that knowledge transfer happens naturally, leaving your team stronger and more capable.
+					We don't just build software—we build partnerships. Our collaborative approach ensures
+					that knowledge transfer happens naturally, leaving your team stronger and more capable.
 				</p>
-				
+
 				<div class="approach-features">
 					<div class="feature-item">
 						<div class="feature-icon">🤝</div>
@@ -194,20 +212,26 @@
 							<p>We work alongside your team, not in isolation. Your success is our success.</p>
 						</div>
 					</div>
-					
+
 					<div class="feature-item">
 						<div class="feature-icon">📚</div>
 						<div class="feature-content">
 							<h4>Knowledge Transfer</h4>
-							<p>Every engagement includes comprehensive documentation and training to ensure continuity.</p>
+							<p>
+								Every engagement includes comprehensive documentation and training to ensure
+								continuity.
+							</p>
 						</div>
 					</div>
-					
+
 					<div class="feature-item">
 						<div class="feature-icon">⚡</div>
 						<div class="feature-content">
 							<h4>Rapid Iteration</h4>
-							<p>We believe in fast feedback loops and continuous improvement throughout the development process.</p>
+							<p>
+								We believe in fast feedback loops and continuous improvement throughout the
+								development process.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -221,17 +245,25 @@
 	<div class="container">
 		<div class="cta-content">
 			<h2>Ready to Cultivate Success Together?</h2>
-			<p>Let's explore how our expertise can accelerate your next project. We'd love to hear about your challenges and discuss how we can help.</p>
+			<p>
+				Let's explore how our expertise can accelerate your next project. We'd love to hear about
+				your challenges and discuss how we can help.
+			</p>
 			<div class="cta-buttons">
 				<a href="mailto:hello@pothosca.com?subject=Let%27s%20Talk" class="btn btn-primary btn-lg">
 					<span>Start the Conversation</span>
-					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<path d="m9 18 6-6-6-6"/>
+					<svg
+						width="20"
+						height="20"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path d="m9 18 6-6-6-6" />
 					</svg>
 				</a>
-				<a href="/services" class="btn btn-secondary btn-lg">
-					Explore Our Services
-				</a>
+				<a href="/services" class="btn btn-secondary btn-lg"> Explore Our Services </a>
 			</div>
 		</div>
 	</div>

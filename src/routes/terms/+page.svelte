@@ -16,49 +16,57 @@
 			<section class="content-section">
 				<h2>1. Acceptance of Terms</h2>
 				<p>
-					By accessing and using Pothos Consulting & Advising's services, you accept and agree to be bound by the terms and provision of this agreement.
+					By accessing and using Pothos Consulting & Advising's services, you accept and agree to be
+					bound by the terms and provision of this agreement.
 				</p>
 			</section>
 
 			<section class="content-section">
 				<h2>2. Services</h2>
 				<p>
-					Pothos Consulting & Advising provides strategic consulting, operational excellence, and leadership development services to businesses and organizations.
+					Pothos Consulting & Advising provides strategic consulting, operational excellence, and
+					leadership development services to businesses and organizations.
 				</p>
 			</section>
 
 			<section class="content-section">
 				<h2>3. Client Responsibilities</h2>
 				<p>
-					Clients are responsible for providing accurate information, timely feedback, and necessary resources to ensure successful engagement outcomes.
+					Clients are responsible for providing accurate information, timely feedback, and necessary
+					resources to ensure successful engagement outcomes.
 				</p>
 			</section>
 
 			<section class="content-section">
 				<h2>4. Confidentiality</h2>
 				<p>
-					We maintain strict confidentiality regarding all client information and proprietary data shared during our engagements.
+					We maintain strict confidentiality regarding all client information and proprietary data
+					shared during our engagements.
 				</p>
 			</section>
 
 			<section class="content-section">
 				<h2>5. Intellectual Property</h2>
 				<p>
-					All methodologies, frameworks, and deliverables created specifically for clients remain the property of the respective parties as outlined in individual engagement agreements.
+					All methodologies, frameworks, and deliverables created specifically for clients remain
+					the property of the respective parties as outlined in individual engagement agreements.
 				</p>
 			</section>
 
 			<section class="content-section">
 				<h2>6. Limitation of Liability</h2>
 				<p>
-					Our liability is limited to the fees paid for the specific services provided. We are not liable for indirect or consequential damages.
+					Our liability is limited to the fees paid for the specific services provided. We are not
+					liable for indirect or consequential damages.
 				</p>
 			</section>
 
 			<section class="content-section">
 				<h2>7. Contact Information</h2>
 				<p>
-					For questions about these terms, please contact us at <a href="/contact">our contact page</a>.
+					For questions about these terms, please contact us at <a href="/contact"
+						>our contact page</a
+					>.
 				</p>
 			</section>
 		</div>
@@ -121,4 +129,4 @@
 	.content-section a:hover {
 		color: var(--color-forest-700);
 	}
-</style> 
+</style>

@@ -3,12 +3,9 @@
 	import { onMount } from 'svelte';
 
 	let scrolled = false;
-	let mounted = false;
 	let mobileMenuOpen = false;
 
 	onMount(() => {
-		mounted = true;
-		
 		const handleScroll = () => {
 			scrolled = window.scrollY > 20;
 		};
@@ -20,7 +17,7 @@
 	function toggleMobileMenu() {
 		mobileMenuOpen = !mobileMenuOpen;
 		console.log('Mobile menu toggled:', mobileMenuOpen); // Debug log
-		
+
 		// Prevent body scroll when mobile menu is open
 		if (mobileMenuOpen) {
 			document.body.style.overflow = 'hidden';
@@ -55,48 +52,98 @@
 					<span class="logo-tagline">Consulting & Advising</span>
 				</div>
 			</a>
-			
+
 			<!-- Refined Navigation -->
 			<nav class="nav" class:open={mobileMenuOpen}>
 				<ul class="nav-list">
 					<li class="nav-item">
-						<a href="/" class="nav-link" class:active={$page.url.pathname === '/'} on:click={closeMobileMenu}>
+						<a
+							href="/"
+							class="nav-link"
+							class:active={$page.url.pathname === '/'}
+							on:click={closeMobileMenu}
+						>
 							<span class="nav-icon">
-								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-									<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-									<polyline points="9,22 9,12 15,12 15,22"/>
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+									<polyline points="9,22 9,12 15,12 15,22" />
 								</svg>
 							</span>
 							<span class="nav-text">Home</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="/services" class="nav-link" class:active={$page.url.pathname === '/services'} on:click={closeMobileMenu}>
+						<a
+							href="/services"
+							class="nav-link"
+							class:active={$page.url.pathname === '/services'}
+							on:click={closeMobileMenu}
+						>
 							<span class="nav-icon">
-								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-									<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
 								</svg>
 							</span>
 							<span class="nav-text">Services</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="/about" class="nav-link" class:active={$page.url.pathname === '/about'} on:click={closeMobileMenu}>
+						<a
+							href="/about"
+							class="nav-link"
+							class:active={$page.url.pathname === '/about'}
+							on:click={closeMobileMenu}
+						>
 							<span class="nav-icon">
-								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-									<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-									<circle cx="12" cy="7" r="4"/>
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+									<circle cx="12" cy="7" r="4" />
 								</svg>
 							</span>
 							<span class="nav-text">About</span>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="/contact" class="nav-link" class:active={$page.url.pathname === '/contact'} on:click={closeMobileMenu}>
+						<a
+							href="/contact"
+							class="nav-link"
+							class:active={$page.url.pathname === '/contact'}
+							on:click={closeMobileMenu}
+						>
 							<span class="nav-icon">
-								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-									<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-									<polyline points="22,6 12,13 2,6"/>
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path
+										d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+									/>
+									<polyline points="22,6 12,13 2,6" />
 								</svg>
 							</span>
 							<span class="nav-text">Contact</span>
@@ -104,15 +151,13 @@
 					</li>
 				</ul>
 			</nav>
-			
+
 			<!-- Refined CTA Button -->
 			<div class="header-actions">
-				<a href="/contact" class="btn btn-primary header-cta">
-					Get Started
-				</a>
-				
+				<a href="/contact" class="btn btn-primary header-cta"> Get Started </a>
+
 				<!-- Mobile Menu Toggle -->
-				<button 
+				<button
 					class="mobile-menu-toggle"
 					class:active={mobileMenuOpen}
 					on:click={toggleMobileMenu}
@@ -126,14 +171,14 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- Mobile Menu Overlay -->
 	{#if mobileMenuOpen}
-		<div 
-			class="mobile-overlay" 
-			on:click={closeMobileMenu} 
+		<div
+			class="mobile-overlay"
+			on:click={closeMobileMenu}
 			on:keydown={(e) => e.key === 'Escape' && closeMobileMenu()}
-			role="button" 
+			role="button"
 			tabindex="0"
 		></div>
 	{/if}
@@ -318,7 +363,7 @@
 		left: -100%;
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
 		transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
@@ -394,7 +439,7 @@
 		.mobile-menu-toggle {
 			display: none !important;
 		}
-		
+
 		.nav {
 			display: flex !important;
 			position: static !important;
@@ -412,12 +457,12 @@
 		.mobile-menu-toggle {
 			display: flex;
 		}
-		
+
 		/* Hide desktop nav on mobile */
 		.nav {
 			display: none;
 		}
-		
+
 		.nav.open {
 			display: block;
 			position: fixed;
@@ -467,7 +512,7 @@
 			position: relative;
 			overflow: visible;
 		}
-		
+
 		.nav-link::before {
 			display: none;
 		}

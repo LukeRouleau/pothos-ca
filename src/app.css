@@ -4,10 +4,12 @@
 
 :root {
 	/* Typography */
-	--font-body: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	--font-display: "Playfair Display", Georgia, 'Times New Roman', serif;
+	--font-body:
+		'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Open Sans', 'Helvetica Neue', sans-serif;
+	--font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
 	--font-mono: 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
-	
+
 	/* Refined Design System - Sophisticated & Clean */
 	--color-sage-50: #f8faf9;
 	--color-sage-100: #f0f4f1;
@@ -19,7 +21,7 @@
 	--color-sage-700: #475f52;
 	--color-sage-800: #3a4f42;
 	--color-sage-900: #2d3e34;
-	
+
 	--color-forest-50: #f4f7f5;
 	--color-forest-100: #e6ede8;
 	--color-forest-200: #cddad2;
@@ -30,7 +32,7 @@
 	--color-forest-700: #3d5445;
 	--color-forest-800: #334439;
 	--color-forest-900: #2b3930;
-	
+
 	--color-moss-50: #f6f8f6;
 	--color-moss-100: #eaefe8;
 	--color-moss-200: #d5ddd1;
@@ -41,7 +43,7 @@
 	--color-moss-700: #47553d;
 	--color-moss-800: #3b4633;
 	--color-moss-900: #323b2c;
-	
+
 	/* Warm Neutrals */
 	--color-cream-50: #fefdfb;
 	--color-cream-100: #fdfbf7;
@@ -53,7 +55,7 @@
 	--color-cream-700: #b8834a;
 	--color-cream-800: #956833;
 	--color-cream-900: #7a542a;
-	
+
 	--color-stone-50: #fafaf9;
 	--color-stone-100: #f5f5f4;
 	--color-stone-200: #e7e5e4;
@@ -81,20 +83,20 @@
 	--color-background: var(--color-cream-50);
 	--color-surface: var(--color-cream-100);
 	--color-surface-elevated: #ffffff;
-	
+
 	/* Text Colors */
 	--color-text-primary: var(--color-stone-900);
 	--color-text-secondary: var(--color-stone-700);
 	--color-text-muted: var(--color-stone-500);
-	
+
 	/* Border Colors */
 	--color-border: var(--color-sage-200);
 	--color-border-light: var(--color-sage-100);
-	
+
 	/* Accent Colors */
 	--color-accent: var(--color-forest-600);
 	--color-accent-light: var(--color-forest-400);
-	
+
 	/* Spacing Scale */
 	--space-1: 0.25rem;
 	--space-2: 0.5rem;
@@ -109,7 +111,7 @@
 	--space-20: 5rem;
 	--space-24: 6rem;
 	--space-32: 8rem;
-	
+
 	/* Typography Scale */
 	--text-xs: 0.75rem;
 	--text-sm: 0.875rem;
@@ -122,26 +124,26 @@
 	--text-5xl: 3rem;
 	--text-6xl: 3.75rem;
 	--text-7xl: 4.5rem;
-	
+
 	/* Shadows */
 	--shadow-sm: 0 1px 2px 0 rgba(45, 62, 52, 0.05);
 	--shadow-md: 0 4px 6px -1px rgba(45, 62, 52, 0.1), 0 2px 4px -1px rgba(45, 62, 52, 0.06);
 	--shadow-lg: 0 10px 15px -3px rgba(45, 62, 52, 0.1), 0 4px 6px -2px rgba(45, 62, 52, 0.05);
 	--shadow-xl: 0 20px 25px -5px rgba(45, 62, 52, 0.1), 0 10px 10px -5px rgba(45, 62, 52, 0.04);
-	
+
 	/* Border Radius */
 	--radius-sm: 0.375rem;
 	--radius-md: 0.5rem;
 	--radius-lg: 0.75rem;
 	--radius-xl: 1rem;
 	--radius-2xl: 1.5rem;
-	
+
 	/* Refined Transitions */
 	--transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 	--transition-base: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 	--transition-slow: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 	--transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	
+
 	font-family: var(--font-body);
 	color: var(--color-text-primary);
 	line-height: 1.6;
@@ -175,7 +177,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: var(--font-display);
 	font-weight: 600;
 	line-height: 1.2;
@@ -260,7 +267,7 @@ a:hover {
 	left: -100%;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
 	transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -333,11 +340,11 @@ a:hover {
 	h1 {
 		font-size: var(--text-5xl);
 	}
-	
+
 	h2 {
 		font-size: var(--text-4xl);
 	}
-	
+
 	h3 {
 		font-size: var(--text-3xl);
 	}
@@ -444,7 +451,12 @@ label {
 
 /* Enhanced Visual Elements */
 .gradient-text {
-	background: linear-gradient(135deg, var(--color-forest-600), var(--color-sage-500), var(--color-moss-600));
+	background: linear-gradient(
+		135deg,
+		var(--color-forest-600),
+		var(--color-sage-500),
+		var(--color-moss-600)
+	);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -453,13 +465,23 @@ label {
 }
 
 @keyframes gradient-shift {
-	0%, 100% { background-position: 0% 50%; }
-	50% { background-position: 100% 50%; }
+	0%,
+	100% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
 }
 
 /* Enhanced Backgrounds */
 .bg-gradient {
-	background: linear-gradient(135deg, var(--color-sage-50), var(--color-cream-50), var(--color-forest-50));
+	background: linear-gradient(
+		135deg,
+		var(--color-sage-50),
+		var(--color-cream-50),
+		var(--color-forest-50)
+	);
 	position: relative;
 }
 
@@ -470,15 +492,23 @@ label {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-image: 
-		radial-gradient(circle at 1px 1px, rgba(117, 149, 132, 0.08) 1px, transparent 0);
+	background-image: radial-gradient(
+		circle at 1px 1px,
+		rgba(117, 149, 132, 0.08) 1px,
+		transparent 0
+	);
 	background-size: 24px 24px;
 	opacity: 0.6;
 	pointer-events: none;
 }
 
 .bg-gradient-dark {
-	background: linear-gradient(135deg, var(--color-stone-900), var(--color-forest-900), var(--color-moss-900));
+	background: linear-gradient(
+		135deg,
+		var(--color-stone-900),
+		var(--color-forest-900),
+		var(--color-moss-900)
+	);
 	position: relative;
 }
 
@@ -489,8 +519,7 @@ label {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-image: 
-		radial-gradient(circle at 1px 1px, rgba(117, 149, 132, 0.1) 1px, transparent 0);
+	background-image: radial-gradient(circle at 1px 1px, rgba(117, 149, 132, 0.1) 1px, transparent 0);
 	background-size: 32px 32px;
 	opacity: 0.3;
 	pointer-events: none;
@@ -507,24 +536,38 @@ label {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-image: 
+	background-image:
 		linear-gradient(45deg, transparent 40%, rgba(117, 149, 132, 0.02) 50%, transparent 60%),
 		linear-gradient(-45deg, transparent 40%, rgba(74, 104, 84, 0.02) 50%, transparent 60%);
-	background-size: 60px 60px, 60px 60px;
-	background-position: 0 0, 30px 30px;
+	background-size:
+		60px 60px,
+		60px 60px;
+	background-position:
+		0 0,
+		30px 30px;
 	opacity: 0.8;
 	pointer-events: none;
 }
 
 /* Enhanced Animations */
 @keyframes float {
-	0%, 100% { transform: translateY(0px); }
-	50% { transform: translateY(-8px); }
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-8px);
+	}
 }
 
 @keyframes pulse-soft {
-	0%, 100% { opacity: 1; }
-	50% { opacity: 0.8; }
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.8;
+	}
 }
 
 @keyframes slide-up {
@@ -551,11 +594,21 @@ label {
 }
 
 /* Staggered animations */
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }
+.stagger-1 {
+	animation-delay: 0.1s;
+}
+.stagger-2 {
+	animation-delay: 0.2s;
+}
+.stagger-3 {
+	animation-delay: 0.3s;
+}
+.stagger-4 {
+	animation-delay: 0.4s;
+}
+.stagger-5 {
+	animation-delay: 0.5s;
+}
 
 /* Enhanced Cards */
 .card {
@@ -576,7 +629,12 @@ label {
 	left: 0;
 	right: 0;
 	height: 3px;
-	background: linear-gradient(90deg, var(--color-sage-400), var(--color-forest-400), var(--color-moss-400));
+	background: linear-gradient(
+		90deg,
+		var(--color-sage-400),
+		var(--color-forest-400),
+		var(--color-moss-400)
+	);
 	opacity: 0;
 	transition: opacity 0.3s ease;
 }
@@ -601,8 +659,9 @@ label {
 
 .border-gradient {
 	border: 2px solid transparent;
-	background: linear-gradient(var(--color-surface-elevated), var(--color-surface-elevated)) padding-box,
-				linear-gradient(135deg, var(--color-sage-300), var(--color-forest-300)) border-box;
+	background:
+		linear-gradient(var(--color-surface-elevated), var(--color-surface-elevated)) padding-box,
+		linear-gradient(135deg, var(--color-sage-300), var(--color-forest-300)) border-box;
 }
 
 .glass {
@@ -643,15 +702,15 @@ label {
 		padding: var(--space-3) var(--space-4);
 		font-size: 0.9rem;
 	}
-	
+
 	.card {
 		padding: var(--space-6);
 	}
-	
+
 	h1 {
 		font-size: 2.5rem;
 	}
-	
+
 	h2 {
 		font-size: 2rem;
 	}

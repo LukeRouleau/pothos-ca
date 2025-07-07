@@ -1,48 +1,51 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	let mounted = false;
 	let currentTestimonial = 0;
 
 	const testimonials = [
 		{
-			name: "Sarah Martinez",
-			title: "CEO, GreenTech Solutions",
-			avatar: "https://via.placeholder.com/60x60/5a7968/ffffff?text=SM",
-			quote: "Pothos transformed our strategic approach and operational efficiency. Their methodology helped us achieve sustainable growth while building a resilient organization that attracts top talent.",
+			name: 'Sarah Martinez',
+			title: 'CEO, GreenTech Solutions',
+			avatar: 'https://via.placeholder.com/60x60/5a7968/ffffff?text=SM',
+			quote:
+				'Pothos transformed our strategic approach and operational efficiency. Their methodology helped us achieve sustainable growth while building a resilient organization that attracts top talent.',
 			results: [
-				{ number: "300%", label: "Revenue Growth" },
-				{ number: "85%", label: "Team Retention" }
+				{ number: '300%', label: 'Revenue Growth' },
+				{ number: '85%', label: 'Team Retention' }
 			]
 		},
 		{
-			name: "Michael Chen",
-			title: "Founder, TechFlow Dynamics",
-			avatar: "https://via.placeholder.com/60x60/4a6854/ffffff?text=MC",
-			quote: "The strategic clarity and operational excellence we gained through Pothos has been transformational. They helped us scale from startup to market leader with sustainable practices.",
+			name: 'Michael Chen',
+			title: 'Founder, TechFlow Dynamics',
+			avatar: 'https://via.placeholder.com/60x60/4a6854/ffffff?text=MC',
+			quote:
+				'The strategic clarity and operational excellence we gained through Pothos has been transformational. They helped us scale from startup to market leader with sustainable practices.',
 			results: [
-				{ number: "450%", label: "Market Share" },
-				{ number: "92%", label: "Client Satisfaction" }
+				{ number: '450%', label: 'Market Share' },
+				{ number: '92%', label: 'Client Satisfaction' }
 			]
 		},
 		{
-			name: "Elena Rodriguez",
-			title: "VP Operations, Sustainable Ventures",
-			avatar: "https://via.placeholder.com/60x60/5d8268/ffffff?text=ER",
-			quote: "Pothos doesn't just consult—they partner with you for long-term success. Their holistic approach to business transformation delivered results beyond our expectations.",
+			name: 'Elena Rodriguez',
+			title: 'VP Operations, Sustainable Ventures',
+			avatar: 'https://via.placeholder.com/60x60/5d8268/ffffff?text=ER',
+			quote:
+				"Pothos doesn't just consult—they partner with you for long-term success. Their holistic approach to business transformation delivered results beyond our expectations.",
 			results: [
-				{ number: "200%", label: "Efficiency Gain" },
-				{ number: "78%", label: "Cost Reduction" }
+				{ number: '200%', label: 'Efficiency Gain' },
+				{ number: '78%', label: 'Cost Reduction' }
 			]
 		},
 		{
-			name: "David Thompson",
-			title: "Chief Strategy Officer, Innovation Labs",
-			avatar: "https://via.placeholder.com/60x60/759584/ffffff?text=DT",
-			quote: "Working with Pothos was a game-changer. Their strategic insights and hands-on approach helped us navigate complex market challenges and emerge stronger than ever.",
+			name: 'David Thompson',
+			title: 'Chief Strategy Officer, Innovation Labs',
+			avatar: 'https://via.placeholder.com/60x60/759584/ffffff?text=DT',
+			quote:
+				'Working with Pothos was a game-changer. Their strategic insights and hands-on approach helped us navigate complex market challenges and emerge stronger than ever.',
 			results: [
-				{ number: "180%", label: "Productivity" },
-				{ number: "95%", label: "Goal Achievement" }
+				{ number: '180%', label: 'Productivity' },
+				{ number: '95%', label: 'Goal Achievement' }
 			]
 		}
 	];
@@ -51,7 +54,6 @@
 	let isPaused = false;
 
 	onMount(() => {
-		mounted = true;
 		startTestimonialCycle();
 		return () => {
 			if (testimonialInterval) {
@@ -79,64 +81,65 @@
 		isPaused = false;
 	}
 
-	function setTestimonial(index: number) {
-		currentTestimonial = index;
-		startTestimonialCycle(); // Restart the cycle
-	}
-	
 	// Refined service data with professional terminology
 	const services = [
 		{
-			title: "Strategic Growth Consulting",
-			description: "Comprehensive analysis and strategic planning to unlock sustainable growth opportunities through market insights and competitive positioning.",
+			title: 'Strategic Growth Consulting',
+			description:
+				'Comprehensive analysis and strategic planning to unlock sustainable growth opportunities through market insights and competitive positioning.',
 			icon: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-forest-600);">
 				<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
 			</svg>`,
 			features: [
-				"Market analysis and competitive intelligence",
-				"Strategic roadmap development",
-				"Growth opportunity identification",
-				"Performance measurement frameworks"
+				'Market analysis and competitive intelligence',
+				'Strategic roadmap development',
+				'Growth opportunity identification',
+				'Performance measurement frameworks'
 			],
-			timeline: "3-6 months",
-			engagement: "Strategic Partnership"
+			timeline: '3-6 months',
+			engagement: 'Strategic Partnership'
 		},
 		{
-			title: "Operational Excellence",
-			description: "Systematic optimization of business processes and organizational capabilities to drive efficiency, quality, and sustainable performance improvements.",
+			title: 'Operational Excellence',
+			description:
+				'Systematic optimization of business processes and organizational capabilities to drive efficiency, quality, and sustainable performance improvements.',
 			icon: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-forest-600);">
 				<circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
 			</svg>`,
 			features: [
-				"Process optimization and automation",
-				"Quality management systems",
-				"Performance analytics and KPIs",
-				"Change management support"
+				'Process optimization and automation',
+				'Quality management systems',
+				'Performance analytics and KPIs',
+				'Change management support'
 			],
-			timeline: "4-8 months",
-			engagement: "Implementation Project"
+			timeline: '4-8 months',
+			engagement: 'Implementation Project'
 		},
 		{
-			title: "Leadership Development",
-			description: "Executive coaching and leadership capability building to develop high-performing teams and sustainable organizational culture.",
+			title: 'Leadership Development',
+			description:
+				'Executive coaching and leadership capability building to develop high-performing teams and sustainable organizational culture.',
 			icon: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-forest-600);">
 				<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
 			</svg>`,
 			features: [
-				"Executive coaching and mentoring",
-				"Leadership assessment and development",
-				"Team effectiveness programs",
-				"Succession planning strategies"
+				'Executive coaching and mentoring',
+				'Leadership assessment and development',
+				'Team effectiveness programs',
+				'Succession planning strategies'
 			],
-			timeline: "6-12 months",
-			engagement: "Ongoing Partnership"
+			timeline: '6-12 months',
+			engagement: 'Ongoing Partnership'
 		}
 	];
 </script>
 
 <svelte:head>
 	<title>Pothos Consulting & Advising | Premier Software Consulting</title>
-	<meta name="description" content="Cultivating exceptional software solutions through expert guidance, engineering, and strategy." />
+	<meta
+		name="description"
+		content="Cultivating exceptional software solutions through expert guidance, engineering, and strategy."
+	/>
 </svelte:head>
 
 <!-- Refined Hero Section -->
@@ -154,26 +157,27 @@
 			<div class="orb orb-8"></div>
 		</div>
 	</div>
-	
+
 	<div class="hero-content">
 		<div class="hero-badges animate-fade-in-up">
 			<span class="badge">Strategic Growth Solutions</span>
 			<span class="badge">Sustainable Business Practices</span>
 		</div>
-		
+
 		<h1 class="hero-title animate-fade-in-up stagger-1">
 			Transform Your Business with <span class="gradient-text">Strategic Excellence</span>
 		</h1>
-		
+
 		<p class="hero-description animate-fade-in-up stagger-2">
-			We partner with ambitious organizations to unlock sustainable growth through proven methodologies, strategic insight, and operational excellence. Your success is our expertise.
+			We partner with ambitious organizations to unlock sustainable growth through proven
+			methodologies, strategic insight, and operational excellence. Your success is our expertise.
 		</p>
-		
+
 		<div class="hero-actions animate-fade-in-up stagger-3">
 			<a href="/contact" class="btn btn-primary btn-large">Start Your Transformation</a>
 			<a href="/services" class="btn btn-outline btn-large">Explore Our Expertise</a>
 		</div>
-		
+
 		<div class="hero-stats animate-fade-in-up stagger-4">
 			<div class="stat animate-scale-in">
 				<div class="stat-number gradient-text">150+</div>
@@ -196,18 +200,22 @@
 	<div class="container">
 		<div class="section-header">
 			<h2 class="text-gradient">Our Strategic Approach</h2>
-			<p>Every organization is unique. Our tailored methodologies ensure sustainable growth that aligns with your vision and market realities.</p>
+			<p>
+				Every organization is unique. Our tailored methodologies ensure sustainable growth that
+				aligns with your vision and market realities.
+			</p>
 		</div>
-		
+
 		<div class="services-grid">
 			{#each services as service, index}
 				<div class="service-card card animate-fade-in-up stagger-{index + 1}">
 					<div class="service-icon">
+						<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 						{@html service.icon}
 					</div>
 					<h3>{service.title}</h3>
 					<p class="service-description">{service.description}</p>
-					
+
 					<div class="service-features">
 						<h4>Key Deliverables:</h4>
 						<ul>
@@ -219,7 +227,7 @@
 							{/each}
 						</ul>
 					</div>
-					
+
 					<div class="service-meta">
 						<div class="service-timeline">
 							<span class="meta-icon">⏱</span>
@@ -230,12 +238,12 @@
 							<span>{service.engagement}</span>
 						</div>
 					</div>
-					
+
 					<a href="/services" class="btn btn-outline">Learn More</a>
 				</div>
 			{/each}
 		</div>
-		
+
 		<!-- Process Preview -->
 		<div class="process-preview bg-texture-subtle">
 			<h3 class="text-gradient">Our Proven Methodology</h3>
@@ -244,7 +252,10 @@
 					<div class="step-number">1</div>
 					<div class="step-content">
 						<h4>Strategic Assessment</h4>
-						<p>Comprehensive analysis of your current position, market dynamics, and growth opportunities.</p>
+						<p>
+							Comprehensive analysis of your current position, market dynamics, and growth
+							opportunities.
+						</p>
 					</div>
 				</div>
 				<div class="process-step animate-fade-in-left stagger-2">
@@ -273,16 +284,21 @@
 			<div class="about-text">
 				<h2 class="text-gradient">Excellence Through Experience</h2>
 				<p class="lead">
-					We believe that exceptional results come from the intersection of deep expertise, proven methodologies, and genuine partnership with our clients.
+					We believe that exceptional results come from the intersection of deep expertise, proven
+					methodologies, and genuine partnership with our clients.
 				</p>
 				<p>
-					Our approach combines strategic thinking with practical execution, ensuring that every engagement delivers measurable value and lasting impact. We don't just provide recommendations—we partner with you to achieve transformational results.
+					Our approach combines strategic thinking with practical execution, ensuring that every
+					engagement delivers measurable value and lasting impact. We don't just provide
+					recommendations—we partner with you to achieve transformational results.
 				</p>
-				
+
 				<div class="values-preview">
 					<div class="value-item">
 						<span class="value-icon">⚡</span>
-						<span><strong>Strategic Excellence:</strong> Data-driven insights and proven frameworks</span>
+						<span
+							><strong>Strategic Excellence:</strong> Data-driven insights and proven frameworks</span
+						>
 					</div>
 					<div class="value-item">
 						<span class="value-icon">🎯</span>
@@ -290,10 +306,11 @@
 					</div>
 					<div class="value-item">
 						<span class="value-icon">🤝</span>
-						<span><strong>True Partnership:</strong> Collaborative approach to lasting success</span>
+						<span><strong>True Partnership:</strong> Collaborative approach to lasting success</span
+						>
 					</div>
 				</div>
-				
+
 				<a href="/about" class="btn btn-primary">Discover Our Story</a>
 			</div>
 		</div>
@@ -305,10 +322,13 @@
 	<div class="container">
 		<div class="section-header">
 			<h2 class="text-gradient">What Our Clients Say</h2>
-			<p>Real results from real partnerships. Discover how we've helped organizations transform their business outcomes.</p>
+			<p>
+				Real results from real partnerships. Discover how we've helped organizations transform their
+				business outcomes.
+			</p>
 		</div>
-		
-		<div 
+
+		<div
 			class="testimonial-ribbon"
 			role="region"
 			aria-label="Client testimonials"
@@ -317,13 +337,24 @@
 		>
 			<div class="ribbon-track">
 				<!-- Create multiple sets for truly seamless loop -->
-				{#each [...testimonials, ...testimonials, ...testimonials] as testimonial, index}
+				{#each [...testimonials, ...testimonials, ...testimonials] as testimonial}
 					<div class="ribbon-card">
 						<div class="ribbon-content">
 							<div class="quote-mark">
-								<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-									<path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/>
-									<path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+								<svg
+									width="32"
+									height="32"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path
+										d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"
+									/>
+									<path
+										d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"
+									/>
 								</svg>
 							</div>
 							<blockquote class="ribbon-quote">
@@ -341,7 +372,6 @@
 									</div>
 								</div>
 							</div>
-
 						</div>
 					</div>
 				{/each}
@@ -357,7 +387,8 @@
 			<div class="cta-text">
 				<h2>Ready to Transform Your Business?</h2>
 				<p>
-					Every successful transformation begins with a strategic conversation. Let's explore how our proven methodologies can unlock your organization's potential.
+					Every successful transformation begins with a strategic conversation. Let's explore how
+					our proven methodologies can unlock your organization's potential.
 				</p>
 			</div>
 			<div class="cta-actions">
@@ -397,25 +428,32 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background-image: 
+		background-image:
 			radial-gradient(circle at 20% 20%, rgba(117, 149, 132, 0.1) 2px, transparent 2px),
 			radial-gradient(circle at 80% 80%, rgba(74, 104, 84, 0.08) 1px, transparent 1px),
 			radial-gradient(circle at 40% 60%, rgba(93, 130, 105, 0.06) 1px, transparent 1px);
-		background-size: 80px 80px, 60px 60px, 100px 100px;
-		background-position: 0 0, 40px 40px, 20px 60px;
+		background-size:
+			80px 80px,
+			60px 60px,
+			100px 100px;
+		background-position:
+			0 0,
+			40px 40px,
+			20px 60px;
 		animation: pattern-drift 20s ease-in-out infinite;
 	}
 
 	@keyframes pattern-drift {
-		0%, 100% { 
+		0%,
+		100% {
 			transform: translate(0, 0) rotate(0deg);
 			opacity: 0.6;
 		}
-		33% { 
+		33% {
 			transform: translate(10px, -5px) rotate(1deg);
 			opacity: 0.4;
 		}
-		66% { 
+		66% {
 			transform: translate(-5px, 10px) rotate(-0.5deg);
 			opacity: 0.7;
 		}
@@ -460,20 +498,51 @@
 
 	/* Outer rings using background */
 	.hero-orbs {
-		background: 
-			radial-gradient(circle at center, transparent 399px, rgba(117, 149, 132, 0.12) 400px, rgba(117, 149, 132, 0.12) 401px, transparent 402px),
-			radial-gradient(circle at center, transparent 549px, rgba(93, 130, 105, 0.1) 550px, rgba(93, 130, 105, 0.1) 551px, transparent 552px),
-			radial-gradient(circle at center, transparent 699px, rgba(117, 149, 132, 0.08) 700px, rgba(117, 149, 132, 0.08) 701px, transparent 702px),
-			radial-gradient(circle at center, transparent 849px, rgba(93, 130, 105, 0.06) 850px, rgba(93, 130, 105, 0.06) 851px, transparent 852px),
-			radial-gradient(circle at center, transparent 999px, rgba(74, 104, 84, 0.05) 1000px, rgba(74, 104, 84, 0.05) 1001px, transparent 1002px);
+		background:
+			radial-gradient(
+				circle at center,
+				transparent 399px,
+				rgba(117, 149, 132, 0.12) 400px,
+				rgba(117, 149, 132, 0.12) 401px,
+				transparent 402px
+			),
+			radial-gradient(
+				circle at center,
+				transparent 549px,
+				rgba(93, 130, 105, 0.1) 550px,
+				rgba(93, 130, 105, 0.1) 551px,
+				transparent 552px
+			),
+			radial-gradient(
+				circle at center,
+				transparent 699px,
+				rgba(117, 149, 132, 0.08) 700px,
+				rgba(117, 149, 132, 0.08) 701px,
+				transparent 702px
+			),
+			radial-gradient(
+				circle at center,
+				transparent 849px,
+				rgba(93, 130, 105, 0.06) 850px,
+				rgba(93, 130, 105, 0.06) 851px,
+				transparent 852px
+			),
+			radial-gradient(
+				circle at center,
+				transparent 999px,
+				rgba(74, 104, 84, 0.05) 1000px,
+				rgba(74, 104, 84, 0.05) 1001px,
+				transparent 1002px
+			);
 		animation: ring-pulse 10s ease-in-out infinite;
 	}
 
 	@keyframes ring-pulse {
-		0%, 100% { 
+		0%,
+		100% {
 			opacity: 0.4;
 		}
-		50% { 
+		50% {
 			opacity: 0.7;
 		}
 	}
@@ -500,7 +569,11 @@
 		left: 50%;
 		width: 12px;
 		height: 12px;
-		background: radial-gradient(circle at 30% 30%, rgba(117, 149, 132, 0.9), rgba(93, 130, 105, 0.5));
+		background: radial-gradient(
+			circle at 30% 30%,
+			rgba(117, 149, 132, 0.9),
+			rgba(93, 130, 105, 0.5)
+		);
 		border-radius: 50%;
 		transform: translateX(-50%);
 		box-shadow: 0 0 15px rgba(117, 149, 132, 0.3);
@@ -521,7 +594,11 @@
 		right: -5px;
 		width: 10px;
 		height: 10px;
-		background: radial-gradient(circle at 30% 30%, rgba(74, 104, 84, 0.9), rgba(117, 149, 132, 0.5));
+		background: radial-gradient(
+			circle at 30% 30%,
+			rgba(74, 104, 84, 0.9),
+			rgba(117, 149, 132, 0.5)
+		);
 		border-radius: 50%;
 		transform: translateY(-50%);
 		box-shadow: 0 0 12px rgba(74, 104, 84, 0.3);
@@ -563,7 +640,11 @@
 		right: -7px;
 		width: 14px;
 		height: 14px;
-		background: radial-gradient(circle at 30% 30%, rgba(117, 149, 132, 0.8), rgba(93, 130, 105, 0.4));
+		background: radial-gradient(
+			circle at 30% 30%,
+			rgba(117, 149, 132, 0.8),
+			rgba(93, 130, 105, 0.4)
+		);
 		border-radius: 50%;
 		transform: translateY(-50%);
 		box-shadow: 0 0 18px rgba(117, 149, 132, 0.25);
@@ -605,7 +686,11 @@
 		left: 50%;
 		width: 11px;
 		height: 11px;
-		background: radial-gradient(circle at 30% 30%, rgba(117, 149, 132, 0.7), rgba(74, 104, 84, 0.3));
+		background: radial-gradient(
+			circle at 30% 30%,
+			rgba(117, 149, 132, 0.7),
+			rgba(74, 104, 84, 0.3)
+		);
 		border-radius: 50%;
 		transform: translateX(-50%);
 		box-shadow: 0 0 14px rgba(117, 149, 132, 0.2);
@@ -626,7 +711,11 @@
 		right: 50%;
 		width: 13px;
 		height: 13px;
-		background: radial-gradient(circle at 30% 30%, rgba(93, 130, 105, 0.7), rgba(117, 149, 132, 0.3));
+		background: radial-gradient(
+			circle at 30% 30%,
+			rgba(93, 130, 105, 0.7),
+			rgba(117, 149, 132, 0.3)
+		);
 		border-radius: 50%;
 		transform: translateX(50%);
 		box-shadow: 0 0 16px rgba(93, 130, 105, 0.2);
@@ -655,43 +744,75 @@
 	}
 
 	@keyframes orbit-1 {
-		from { transform: translate(-50%, -50%) rotate(0deg); }
-		to { transform: translate(-50%, -50%) rotate(360deg); }
+		from {
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+		to {
+			transform: translate(-50%, -50%) rotate(360deg);
+		}
 	}
 
 	@keyframes orbit-2 {
-		from { transform: translate(-50%, -50%) rotate(0deg); }
-		to { transform: translate(-50%, -50%) rotate(360deg); }
+		from {
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+		to {
+			transform: translate(-50%, -50%) rotate(360deg);
+		}
 	}
 
 	@keyframes orbit-3 {
-		from { transform: translate(-50%, -50%) rotate(0deg); }
-		to { transform: translate(-50%, -50%) rotate(360deg); }
+		from {
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+		to {
+			transform: translate(-50%, -50%) rotate(360deg);
+		}
 	}
 
 	@keyframes orbit-4 {
-		from { transform: translate(-50%, -50%) rotate(0deg); }
-		to { transform: translate(-50%, -50%) rotate(360deg); }
+		from {
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+		to {
+			transform: translate(-50%, -50%) rotate(360deg);
+		}
 	}
 
 	@keyframes orbit-5 {
-		from { transform: translate(-50%, -50%) rotate(0deg); }
-		to { transform: translate(-50%, -50%) rotate(360deg); }
+		from {
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+		to {
+			transform: translate(-50%, -50%) rotate(360deg);
+		}
 	}
 
 	@keyframes orbit-6 {
-		from { transform: translate(-50%, -50%) rotate(0deg); }
-		to { transform: translate(-50%, -50%) rotate(360deg); }
+		from {
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+		to {
+			transform: translate(-50%, -50%) rotate(360deg);
+		}
 	}
 
 	@keyframes orbit-7 {
-		from { transform: translate(-50%, -50%) rotate(0deg); }
-		to { transform: translate(-50%, -50%) rotate(360deg); }
+		from {
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+		to {
+			transform: translate(-50%, -50%) rotate(360deg);
+		}
 	}
 
 	@keyframes orbit-8 {
-		from { transform: translate(-50%, -50%) rotate(0deg); }
-		to { transform: translate(-50%, -50%) rotate(360deg); }
+		from {
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+		to {
+			transform: translate(-50%, -50%) rotate(360deg);
+		}
 	}
 
 	.hero-content {
@@ -993,7 +1114,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: 
+		background:
 			radial-gradient(circle at 20% 30%, rgba(117, 149, 132, 0.05) 0%, transparent 50%),
 			radial-gradient(circle at 80% 70%, rgba(93, 130, 105, 0.04) 0%, transparent 50%);
 		pointer-events: none;
@@ -1036,7 +1157,7 @@
 		background: var(--color-surface-elevated);
 		border-radius: 20px;
 		padding: var(--space-6);
-		box-shadow: 
+		box-shadow:
 			0 10px 40px -10px rgba(0, 0, 0, 0.15),
 			0 0 0 1px rgba(255, 255, 255, 0.05);
 		transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1059,7 +1180,7 @@
 
 	.ribbon-card:hover {
 		transform: translateY(-8px) scale(1.02);
-		box-shadow: 
+		box-shadow:
 			0 20px 60px -10px rgba(0, 0, 0, 0.25),
 			0 0 0 1px rgba(255, 255, 255, 0.1);
 	}
@@ -1167,10 +1288,6 @@
 		font-size: 0.75rem;
 		opacity: 0.8;
 	}
-
-
-
-
 
 	/* Responsive Design */
 	@media (max-width: 768px) {
@@ -1299,10 +1416,28 @@
 		}
 
 		.hero-orbs {
-			background: 
-				radial-gradient(circle at center, transparent 299px, rgba(117, 149, 132, 0.12) 300px, rgba(117, 149, 132, 0.12) 301px, transparent 302px),
-				radial-gradient(circle at center, transparent 399px, rgba(93, 130, 105, 0.1) 400px, rgba(93, 130, 105, 0.1) 401px, transparent 402px),
-				radial-gradient(circle at center, transparent 499px, rgba(117, 149, 132, 0.08) 500px, rgba(117, 149, 132, 0.08) 501px, transparent 502px);
+			background:
+				radial-gradient(
+					circle at center,
+					transparent 299px,
+					rgba(117, 149, 132, 0.12) 300px,
+					rgba(117, 149, 132, 0.12) 301px,
+					transparent 302px
+				),
+				radial-gradient(
+					circle at center,
+					transparent 399px,
+					rgba(93, 130, 105, 0.1) 400px,
+					rgba(93, 130, 105, 0.1) 401px,
+					transparent 402px
+				),
+				radial-gradient(
+					circle at center,
+					transparent 499px,
+					rgba(117, 149, 132, 0.08) 500px,
+					rgba(117, 149, 132, 0.08) 501px,
+					transparent 502px
+				);
 		}
 
 		.orb-1 {
@@ -1378,10 +1513,28 @@
 		}
 
 		.hero-orbs {
-			background: 
-				radial-gradient(circle at center, transparent 199px, rgba(117, 149, 132, 0.12) 200px, rgba(117, 149, 132, 0.12) 201px, transparent 202px),
-				radial-gradient(circle at center, transparent 274px, rgba(93, 130, 105, 0.1) 275px, rgba(93, 130, 105, 0.1) 276px, transparent 277px),
-				radial-gradient(circle at center, transparent 324px, rgba(117, 149, 132, 0.08) 325px, rgba(117, 149, 132, 0.08) 326px, transparent 327px);
+			background:
+				radial-gradient(
+					circle at center,
+					transparent 199px,
+					rgba(117, 149, 132, 0.12) 200px,
+					rgba(117, 149, 132, 0.12) 201px,
+					transparent 202px
+				),
+				radial-gradient(
+					circle at center,
+					transparent 274px,
+					rgba(93, 130, 105, 0.1) 275px,
+					rgba(93, 130, 105, 0.1) 276px,
+					transparent 277px
+				),
+				radial-gradient(
+					circle at center,
+					transparent 324px,
+					rgba(117, 149, 132, 0.08) 325px,
+					rgba(117, 149, 132, 0.08) 326px,
+					transparent 327px
+				);
 		}
 
 		.orb-1 {
@@ -1517,9 +1670,21 @@
 		}
 
 		.hero-orbs {
-			background: 
-				radial-gradient(circle at center, transparent 139px, rgba(117, 149, 132, 0.12) 140px, rgba(117, 149, 132, 0.12) 141px, transparent 142px),
-				radial-gradient(circle at center, transparent 189px, rgba(93, 130, 105, 0.1) 190px, rgba(93, 130, 105, 0.1) 191px, transparent 192px);
+			background:
+				radial-gradient(
+					circle at center,
+					transparent 139px,
+					rgba(117, 149, 132, 0.12) 140px,
+					rgba(117, 149, 132, 0.12) 141px,
+					transparent 142px
+				),
+				radial-gradient(
+					circle at center,
+					transparent 189px,
+					rgba(93, 130, 105, 0.1) 190px,
+					rgba(93, 130, 105, 0.1) 191px,
+					transparent 192px
+				);
 		}
 
 		.orb-1 {
@@ -1563,7 +1728,10 @@
 		}
 
 		.hero-pattern {
-			background-size: 40px 40px, 30px 30px, 50px 50px;
+			background-size:
+				40px 40px,
+				30px 30px,
+				50px 50px;
 		}
 
 		.services {
@@ -1613,5 +1781,3 @@
 		}
 	}
 </style>
-
-

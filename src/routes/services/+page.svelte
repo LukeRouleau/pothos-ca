@@ -9,37 +9,39 @@
 
 	const services = [
 		{
-			title: "Full-Stack Product Engineering",
-			description: "Whether green-field or rescue mission, we deliver production-ready applications that delight users and drive revenue. Our toolbelt spans TypeScript, Go, Rust, Python, React, Svelte, and beyond.",
+			title: 'Full-Stack Product Engineering',
+			description:
+				'Whether green-field or rescue mission, we deliver production-ready applications that delight users and drive revenue. Our toolbelt spans TypeScript, Go, Rust, Python, React, Svelte, and beyond.',
 			features: [
-				"MVP Development & Prototyping",
-				"Enterprise Application Development",
-				"Legacy System Modernization",
-				"API Design & Development",
-				"Database Architecture & Optimization",
-				"Performance Optimization",
-				"Security Implementation",
-				"Code Review & Quality Assurance"
+				'MVP Development & Prototyping',
+				'Enterprise Application Development',
+				'Legacy System Modernization',
+				'API Design & Development',
+				'Database Architecture & Optimization',
+				'Performance Optimization',
+				'Security Implementation',
+				'Code Review & Quality Assurance'
 			],
 			icon: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
 				<rect width="18" height="18" x="3" y="3" rx="2"/>
 				<path d="m9 9 5 12 1.774-5.226L21 14 9 9z"/>
 			</svg>`,
-			timeline: "2-12 weeks",
-			engagement: "Dedicated Team"
+			timeline: '2-12 weeks',
+			engagement: 'Dedicated Team'
 		},
 		{
-			title: "Architecture & Technical Strategy",
-			description: "We engage with stakeholders to translate business objectives into modular, scalable systems. Expect architectural diagrams, risk analysis, and a phased roadmap your team can rally around.",
+			title: 'Architecture & Technical Strategy',
+			description:
+				'We engage with stakeholders to translate business objectives into modular, scalable systems. Expect architectural diagrams, risk analysis, and a phased roadmap your team can rally around.',
 			features: [
-				"System Architecture Design",
-				"Technology Stack Selection",
-				"Scalability Planning",
-				"Technical Debt Assessment",
-				"Migration Strategy",
-				"Performance Architecture",
-				"Security Architecture",
-				"Documentation & Standards"
+				'System Architecture Design',
+				'Technology Stack Selection',
+				'Scalability Planning',
+				'Technical Debt Assessment',
+				'Migration Strategy',
+				'Performance Architecture',
+				'Security Architecture',
+				'Documentation & Standards'
 			],
 			icon: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
 				<path d="M8 2v4"/>
@@ -48,21 +50,22 @@
 				<path d="M3 10h18"/>
 				<path d="m9 16 2 2 4-4"/>
 			</svg>`,
-			timeline: "1-4 weeks",
-			engagement: "Strategic Consulting"
+			timeline: '1-4 weeks',
+			engagement: 'Strategic Consulting'
 		},
 		{
-			title: "Cloud & DevOps Enablement",
-			description: "CI/CD, infrastructure-as-code, Kubernetes, serverless, observability—we embed best practices that accelerate delivery and maintain stability as you scale.",
+			title: 'Cloud & DevOps Enablement',
+			description:
+				'CI/CD, infrastructure-as-code, Kubernetes, serverless, observability—we embed best practices that accelerate delivery and maintain stability as you scale.',
 			features: [
-				"CI/CD Pipeline Setup",
-				"Cloud Migration & Setup",
-				"Infrastructure as Code",
-				"Container Orchestration",
-				"Monitoring & Alerting",
-				"Security & Compliance",
-				"Cost Optimization",
-				"Disaster Recovery Planning"
+				'CI/CD Pipeline Setup',
+				'Cloud Migration & Setup',
+				'Infrastructure as Code',
+				'Container Orchestration',
+				'Monitoring & Alerting',
+				'Security & Compliance',
+				'Cost Optimization',
+				'Disaster Recovery Planning'
 			],
 			icon: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
 				<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
@@ -70,36 +73,40 @@
 				<path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
 				<path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
 			</svg>`,
-			timeline: "2-8 weeks",
-			engagement: "Implementation"
+			timeline: '2-8 weeks',
+			engagement: 'Implementation'
 		},
 		{
-			title: "Team Augmentation & Mentorship",
-			description: "Add senior horsepower precisely when you need it. We pair program, level-up engineers, and institute processes that endure.",
+			title: 'Team Augmentation & Mentorship',
+			description:
+				'Add senior horsepower precisely when you need it. We pair program, level-up engineers, and institute processes that endure.',
 			features: [
-				"Senior Developer Placement",
-				"Code Review & Mentoring",
-				"Process Implementation",
-				"Knowledge Transfer",
-				"Team Training & Workshops",
-				"Best Practices Implementation",
-				"Technical Leadership",
-				"Culture & Standards Development"
+				'Senior Developer Placement',
+				'Code Review & Mentoring',
+				'Process Implementation',
+				'Knowledge Transfer',
+				'Team Training & Workshops',
+				'Best Practices Implementation',
+				'Technical Leadership',
+				'Culture & Standards Development'
 			],
 			icon: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
 				<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
 				<circle cx="9" cy="7" r="4"/>
 				<path d="m22 21-3-3m0 0a5.5 5.5 0 1 1-7.54-.54l.04.04L14 19l4 2z"/>
 			</svg>`,
-			timeline: "1-6 months",
-			engagement: "Staff Augmentation"
+			timeline: '1-6 months',
+			engagement: 'Staff Augmentation'
 		}
 	];
 </script>
 
 <svelte:head>
 	<title>Services | Pothos Consulting & Advising</title>
-	<meta name="description" content="Discover the comprehensive consulting and engineering services offered by PothosCA. From full-stack development to DevOps enablement." />
+	<meta
+		name="description"
+		content="Discover the comprehensive consulting and engineering services offered by PothosCA. From full-stack development to DevOps enablement."
+	/>
 </svelte:head>
 
 <!-- Hero Section -->
@@ -110,13 +117,14 @@
 				<span class="badge-icon">⚡</span>
 				<span class="badge-text">Our Services</span>
 			</div>
-			
+
 			<h1 class="hero-title">
 				Comprehensive Solutions for <span class="gradient-text">Modern</span> Development
 			</h1>
-			
+
 			<p class="hero-subtitle">
-				From concept to deployment, we provide expert guidance and hands-on engineering to accelerate your digital transformation and drive measurable business results.
+				From concept to deployment, we provide expert guidance and hands-on engineering to
+				accelerate your digital transformation and drive measurable business results.
 			</p>
 		</div>
 	</div>
@@ -130,6 +138,7 @@
 				<article class="service-card" class:mounted style="animation-delay: {i * 100}ms">
 					<div class="service-header">
 						<div class="service-icon">
+							<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 							{@html service.icon}
 						</div>
 						<div class="service-meta">
@@ -137,11 +146,11 @@
 							<div class="service-timeline">{service.timeline}</div>
 						</div>
 					</div>
-					
+
 					<div class="service-content">
 						<h2 class="service-title">{service.title}</h2>
 						<p class="service-description">{service.description}</p>
-						
+
 						<div class="service-features">
 							<h3>What's Included:</h3>
 							<ul class="features-list">
@@ -151,12 +160,22 @@
 							</ul>
 						</div>
 					</div>
-					
+
 					<div class="service-footer">
-						<a href="mailto:hello@pothosca.com?subject=Service%20Inquiry%20-%20{service.title}" class="service-cta">
+						<a
+							href="mailto:hello@pothosca.com?subject=Service%20Inquiry%20-%20{service.title}"
+							class="service-cta"
+						>
 							Get Started
-							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-								<path d="m9 18 6-6-6-6"/>
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path d="m9 18 6-6-6-6" />
 							</svg>
 						</a>
 					</div>
@@ -176,10 +195,11 @@
 			</div>
 			<h2 class="section-title">How We Work Together</h2>
 			<p class="section-subtitle">
-				Our proven methodology ensures successful outcomes while maintaining transparency and alignment throughout your project.
+				Our proven methodology ensures successful outcomes while maintaining transparency and
+				alignment throughout your project.
 			</p>
 		</div>
-		
+
 		<div class="process-timeline">
 			<div class="timeline-item" class:mounted>
 				<div class="timeline-marker">
@@ -187,37 +207,50 @@
 				</div>
 				<div class="timeline-content">
 					<h3>Discovery & Planning</h3>
-					<p>We start by understanding your goals, constraints, and current state. Through stakeholder interviews and technical assessment, we develop a comprehensive project plan.</p>
+					<p>
+						We start by understanding your goals, constraints, and current state. Through
+						stakeholder interviews and technical assessment, we develop a comprehensive project
+						plan.
+					</p>
 				</div>
 			</div>
-			
+
 			<div class="timeline-item" class:mounted style="animation-delay: 200ms">
 				<div class="timeline-marker">
 					<div class="marker-inner">2</div>
 				</div>
 				<div class="timeline-content">
 					<h3>Design & Architecture</h3>
-					<p>We create detailed technical specifications, system architecture, and project roadmap. All decisions are documented and reviewed with your team.</p>
+					<p>
+						We create detailed technical specifications, system architecture, and project roadmap.
+						All decisions are documented and reviewed with your team.
+					</p>
 				</div>
 			</div>
-			
+
 			<div class="timeline-item" class:mounted style="animation-delay: 400ms">
 				<div class="timeline-marker">
 					<div class="marker-inner">3</div>
 				</div>
 				<div class="timeline-content">
 					<h3>Implementation & Delivery</h3>
-					<p>Our senior engineers execute the plan with regular check-ins, iterative delivery, and continuous integration of feedback from your stakeholders.</p>
+					<p>
+						Our senior engineers execute the plan with regular check-ins, iterative delivery, and
+						continuous integration of feedback from your stakeholders.
+					</p>
 				</div>
 			</div>
-			
+
 			<div class="timeline-item" class:mounted style="animation-delay: 600ms">
 				<div class="timeline-marker">
 					<div class="marker-inner">4</div>
 				</div>
 				<div class="timeline-content">
 					<h3>Knowledge Transfer & Support</h3>
-					<p>We ensure your team can maintain and extend the solution through comprehensive documentation, training, and ongoing support options.</p>
+					<p>
+						We ensure your team can maintain and extend the solution through comprehensive
+						documentation, training, and ongoing support options.
+					</p>
 				</div>
 			</div>
 		</div>
@@ -229,17 +262,28 @@
 	<div class="container">
 		<div class="cta-content">
 			<h2>Ready to Get Started?</h2>
-			<p>Let's discuss how we can help accelerate your next project. Schedule a free discovery call to explore your needs and our approach.</p>
+			<p>
+				Let's discuss how we can help accelerate your next project. Schedule a free discovery call
+				to explore your needs and our approach.
+			</p>
 			<div class="cta-buttons">
-				<a href="mailto:hello@pothosca.com?subject=Service%20Inquiry" class="btn btn-primary btn-lg">
+				<a
+					href="mailto:hello@pothosca.com?subject=Service%20Inquiry"
+					class="btn btn-primary btn-lg"
+				>
 					<span>Request a Proposal</span>
-					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<path d="m9 18 6-6-6-6"/>
+					<svg
+						width="20"
+						height="20"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path d="m9 18 6-6-6-6" />
 					</svg>
 				</a>
-				<a href="/contact" class="btn btn-secondary btn-lg">
-					Contact Us
-				</a>
+				<a href="/contact" class="btn btn-secondary btn-lg"> Contact Us </a>
 			</div>
 		</div>
 	</div>
@@ -654,4 +698,4 @@
 			padding: var(--space-20) 0;
 		}
 	}
-</style> 
+</style>

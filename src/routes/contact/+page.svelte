@@ -20,10 +20,10 @@
 				<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
 				<polyline points="22,6 12,13 2,6"/>
 			</svg>`,
-			title: "Email",
-			value: "hello@pothosca.com",
+			title: 'Email',
+			value: 'hello@pothosca.com',
 			description: "Send us an email and we'll respond within 24 hours",
-			link: "mailto:hello@pothosca.com"
+			link: 'mailto:hello@pothosca.com'
 		},
 		{
 			icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -31,45 +31,52 @@
 				<rect width="4" height="12" x="2" y="9"/>
 				<circle cx="4" cy="4" r="2"/>
 			</svg>`,
-			title: "LinkedIn",
-			value: "@pothosca",
-			description: "Connect with us on LinkedIn for updates and insights",
-			link: "https://www.linkedin.com/company/pothosca"
+			title: 'LinkedIn',
+			value: '@pothosca',
+			description: 'Connect with us on LinkedIn for updates and insights',
+			link: 'https://www.linkedin.com/company/pothosca'
 		},
 		{
 			icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 				<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
 			</svg>`,
-			title: "Schedule Call",
-			value: "Book a Discovery Call",
-			description: "Schedule a free 30-minute consultation to discuss your project",
-			link: "mailto:hello@pothosca.com?subject=Discovery%20Call%20Request"
+			title: 'Schedule Call',
+			value: 'Book a Discovery Call',
+			description: 'Schedule a free 30-minute consultation to discuss your project',
+			link: 'mailto:hello@pothosca.com?subject=Discovery%20Call%20Request'
 		}
 	];
 
 	const faqs = [
 		{
 			question: "What's the typical project timeline?",
-			answer: "Project timelines vary based on scope and complexity. Most projects range from 2-12 weeks, with strategic consulting engagements typically taking 1-4 weeks."
+			answer:
+				'Project timelines vary based on scope and complexity. Most projects range from 2-12 weeks, with strategic consulting engagements typically taking 1-4 weeks.'
 		},
 		{
-			question: "Do you work with startups?",
-			answer: "Absolutely! We work with organizations of all sizes, from early-stage startups to Fortune 500 companies. We tailor our approach to fit your stage and budget."
+			question: 'Do you work with startups?',
+			answer:
+				'Absolutely! We work with organizations of all sizes, from early-stage startups to Fortune 500 companies. We tailor our approach to fit your stage and budget.'
 		},
 		{
-			question: "What technologies do you specialize in?",
-			answer: "We're technology-agnostic and choose the best tools for your specific needs. Our expertise spans TypeScript, Go, Rust, Python, React, Svelte, cloud platforms, and more."
+			question: 'What technologies do you specialize in?',
+			answer:
+				"We're technology-agnostic and choose the best tools for your specific needs. Our expertise spans TypeScript, Go, Rust, Python, React, Svelte, cloud platforms, and more."
 		},
 		{
-			question: "Can you help with existing projects?",
-			answer: "Yes! We frequently work on legacy system modernization, performance optimization, and rescue missions for stalled projects."
+			question: 'Can you help with existing projects?',
+			answer:
+				'Yes! We frequently work on legacy system modernization, performance optimization, and rescue missions for stalled projects.'
 		}
 	];
 </script>
 
 <svelte:head>
 	<title>Contact | Pothos Consulting & Advising</title>
-	<meta name="description" content="Get in touch with the PothosCA team to discuss your next project. Schedule a free consultation or send us a message." />
+	<meta
+		name="description"
+		content="Get in touch with the PothosCA team to discuss your next project. Schedule a free consultation or send us a message."
+	/>
 </svelte:head>
 
 <!-- Hero Section -->
@@ -80,13 +87,14 @@
 				<span class="badge-icon">💬</span>
 				<span class="badge-text">Get in Touch</span>
 			</div>
-			
+
 			<h1 class="hero-title">
 				Let's <span class="gradient-text">Grow</span> Something Incredible Together
 			</h1>
-			
+
 			<p class="hero-subtitle">
-				Have a project in mind or simply exploring options? We'd love to hear from you. Send us a message, and we'll respond within one business day.
+				Have a project in mind or simply exploring options? We'd love to hear from you. Send us a
+				message, and we'll respond within one business day.
 			</p>
 		</div>
 	</div>
@@ -97,8 +105,16 @@
 	<div class="container">
 		<div class="contact-methods-grid">
 			{#each contactMethods as method, i}
-				<a href={method.link} class="contact-method" class:mounted style="animation-delay: {i * 150}ms" target={method.link.startsWith('http') ? '_blank' : '_self'} rel={method.link.startsWith('http') ? 'noopener noreferrer' : ''}>
+				<a
+					href={method.link}
+					class="contact-method"
+					class:mounted
+					style="animation-delay: {i * 150}ms"
+					target={method.link.startsWith('http') ? '_blank' : '_self'}
+					rel={method.link.startsWith('http') ? 'noopener noreferrer' : ''}
+				>
 					<div class="method-icon">
+						<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 						{@html method.icon}
 					</div>
 					<div class="method-content">
@@ -107,8 +123,15 @@
 						<p class="method-description">{method.description}</p>
 					</div>
 					<div class="method-arrow">
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-							<path d="m9 18 6-6-6-6"/>
+						<svg
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path d="m9 18 6-6-6-6" />
 						</svg>
 					</div>
 				</a>
@@ -123,46 +146,54 @@
 		<div class="form-layout">
 			<div class="form-header" class:mounted>
 				<h2>Tell Us About Your Project</h2>
-				<p>Fill out the form below and we'll get back to you within 24 hours. All fields marked with * are required.</p>
+				<p>
+					Fill out the form below and we'll get back to you within 24 hours. All fields marked with
+					* are required.
+				</p>
 			</div>
-			
-			<form class="contact-form" class:mounted action="https://formspree.io/f/placeholder" method="POST">
+
+			<form
+				class="contact-form"
+				class:mounted
+				action="https://formspree.io/f/placeholder"
+				method="POST"
+			>
 				<div class="form-grid">
 					<div class="form-group">
 						<label for="name">Full Name *</label>
-						<input 
-							type="text" 
-							id="name" 
-							name="name" 
+						<input
+							type="text"
+							id="name"
+							name="name"
 							bind:value={formData.name}
-							required 
+							required
 							placeholder="John Smith"
 						/>
 					</div>
-					
+
 					<div class="form-group">
 						<label for="email">Email Address *</label>
-						<input 
-							type="email" 
-							id="email" 
-							name="email" 
+						<input
+							type="email"
+							id="email"
+							name="email"
 							bind:value={formData.email}
-							required 
+							required
 							placeholder="john@company.com"
 						/>
 					</div>
-					
+
 					<div class="form-group">
 						<label for="company">Company</label>
-						<input 
-							type="text" 
-							id="company" 
-							name="company" 
+						<input
+							type="text"
+							id="company"
+							name="company"
 							bind:value={formData.company}
 							placeholder="Your Company"
 						/>
 					</div>
-					
+
 					<div class="form-group">
 						<label for="budget">Project Budget</label>
 						<select id="budget" name="budget" bind:value={formData.budget}>
@@ -175,32 +206,39 @@
 						</select>
 					</div>
 				</div>
-				
+
 				<div class="form-group">
 					<label for="message">Project Details *</label>
-					<textarea 
-						id="message" 
-						name="message" 
+					<textarea
+						id="message"
+						name="message"
 						bind:value={formData.message}
-						rows="6" 
-						required 
+						rows="6"
+						required
 						placeholder="Tell us about your project goals, timeline, and any specific challenges you're facing..."
 					></textarea>
 				</div>
-				
+
 				<div class="form-footer">
 					<button type="submit" class="btn btn-primary btn-lg">
 						<span>Send Message</span>
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-							<path d="m22 2-7 20-4-9-9-4z"/>
-							<path d="M22 2 11 13"/>
+						<svg
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path d="m22 2-7 20-4-9-9-4z" />
+							<path d="M22 2 11 13" />
 						</svg>
 					</button>
-					
+
 					<p class="form-note">
-						By submitting this form, you agree to our 
-						<a href="/privacy" class="text-link">privacy policy</a>. 
-						We'll never share your information with third parties.
+						By submitting this form, you agree to our
+						<a href="/privacy" class="text-link">privacy policy</a>. We'll never share your
+						information with third parties.
 					</p>
 				</div>
 			</form>
@@ -218,10 +256,11 @@
 			</div>
 			<h2 class="section-title">Common Questions</h2>
 			<p class="section-subtitle">
-				Here are answers to some of the most common questions we receive. Don't see yours? Feel free to reach out directly.
+				Here are answers to some of the most common questions we receive. Don't see yours? Feel free
+				to reach out directly.
 			</p>
 		</div>
-		
+
 		<div class="faq-grid">
 			{#each faqs as faq, i}
 				<div class="faq-item" class:mounted style="animation-delay: {i * 100}ms">
@@ -238,11 +277,26 @@
 	<div class="container">
 		<div class="alt-contact-content">
 			<h2>Prefer to Talk Directly?</h2>
-			<p>Sometimes a conversation is worth a thousand emails. Book a free 30-minute discovery call to discuss your project in detail.</p>
-			<a href="mailto:hello@pothosca.com?subject=Discovery%20Call%20Request" class="btn btn-secondary btn-lg">
+			<p>
+				Sometimes a conversation is worth a thousand emails. Book a free 30-minute discovery call to
+				discuss your project in detail.
+			</p>
+			<a
+				href="mailto:hello@pothosca.com?subject=Discovery%20Call%20Request"
+				class="btn btn-secondary btn-lg"
+			>
 				<span>Schedule Discovery Call</span>
-				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-					<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+				<svg
+					width="20"
+					height="20"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+				>
+					<path
+						d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+					/>
 				</svg>
 			</a>
 		</div>
@@ -684,4 +738,4 @@
 			padding: var(--space-6);
 		}
 	}
-</style> 
+</style>
