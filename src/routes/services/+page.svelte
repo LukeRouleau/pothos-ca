@@ -163,7 +163,7 @@
 
 					<div class="service-footer">
 						<a
-							href="mailto:hello@pothosca.com?subject=Service%20Inquiry%20-%20{service.title}"
+							href="mailto:pothosca@gmail.com?subject=Service%20Inquiry%20-%20{service.title}"
 							class="service-cta"
 						>
 							Get Started
@@ -268,7 +268,7 @@
 			</p>
 			<div class="cta-buttons">
 				<a
-					href="mailto:hello@pothosca.com?subject=Service%20Inquiry"
+					href="mailto:pothosca@gmail.com?subject=Service%20Inquiry"
 					class="btn btn-primary btn-lg"
 				>
 					<span>Request a Proposal</span>

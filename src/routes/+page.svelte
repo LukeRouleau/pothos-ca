@@ -159,10 +159,10 @@
 	</div>
 
 	<div class="hero-content">
-		<div class="hero-badges animate-fade-in-up">
+		<!-- <div class="hero-badges animate-fade-in-up">
 			<span class="badge">Strategic Growth Solutions</span>
 			<span class="badge">Sustainable Business Practices</span>
-		</div>
+		</div> -->
 
 		<h1 class="hero-title animate-fade-in-up stagger-1">
 			Transform Your Business with <span class="gradient-text">Strategic Excellence</span>

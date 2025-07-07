@@ -73,7 +73,7 @@
 					</p>
 
 					<div class="footer-contact-methods">
-						<a href="mailto:hello@pothos.ca" class="contact-method">
+						<a href="mailto:pothosca@gmail.com" class="contact-method">
 							<span class="contact-icon">
 								<svg
 									width="20"
@@ -91,10 +91,10 @@
 							</span>
 							<span class="contact-text">
 								<strong>Email Us</strong>
-								<small>hello@pothos.ca</small>
+								<small>pothosca@gmail.com</small>
 							</span>
 						</a>
-						<a href="tel:+1234567890" class="contact-method">
+						<a href="tel:+18636081393" class="contact-method">
 							<span class="contact-icon">
 								<svg
 									width="20"
@@ -111,7 +111,7 @@
 							</span>
 							<span class="contact-text">
 								<strong>Call Us</strong>
-								<small>+1 (555) 123-4567</small>
+								<small>+1 (863) 608-1393</small>
 							</span>
 						</a>
 					</div>

@@ -21,9 +21,9 @@
 				<polyline points="22,6 12,13 2,6"/>
 			</svg>`,
 			title: 'Email',
-			value: 'hello@pothosca.com',
+			value: 'pothosca@gmail.com',
 			description: "Send us an email and we'll respond within 24 hours",
-			link: 'mailto:hello@pothosca.com'
+			link: 'mailto:pothosca@gmail.com'
 		},
 		{
 			icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -43,7 +43,7 @@
 			title: 'Schedule Call',
 			value: 'Book a Discovery Call',
 			description: 'Schedule a free 30-minute consultation to discuss your project',
-			link: 'mailto:hello@pothosca.com?subject=Discovery%20Call%20Request'
+			link: 'mailto:pothosca@gmail.com?subject=Discovery%20Call%20Request'
 		}
 	];
 
@@ -282,7 +282,7 @@
 				discuss your project in detail.
 			</p>
 			<a
-				href="mailto:hello@pothosca.com?subject=Discovery%20Call%20Request"
+				href="mailto:pothosca@gmail.com?subject=Discovery%20Call%20Request"
 				class="btn btn-secondary btn-lg"
 			>
 				<span>Schedule Discovery Call</span>

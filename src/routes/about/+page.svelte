@@ -250,7 +250,7 @@
 				your challenges and discuss how we can help.
 			</p>
 			<div class="cta-buttons">
-				<a href="mailto:hello@pothosca.com?subject=Let%27s%20Talk" class="btn btn-primary btn-lg">
+				<a href="mailto:pothosca@gmail.com?subject=Let%27s%20Talk" class="btn btn-primary btn-lg">
 					<span>Start the Conversation</span>
 					<svg
 						width="20"
