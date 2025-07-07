@@ -60,11 +60,7 @@
 			<nav class="nav desktop-nav">
 				<ul class="nav-list">
 					<li class="nav-item">
-						<a
-							href="/"
-							class="nav-link"
-							class:active={$page.url.pathname === '/'}
-						>
+						<a href="/" class="nav-link" class:active={$page.url.pathname === '/'}>
 							<span class="nav-icon">
 								<svg
 									width="16"
@@ -82,11 +78,7 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a
-							href="/services"
-							class="nav-link"
-							class:active={$page.url.pathname === '/services'}
-						>
+						<a href="/services" class="nav-link" class:active={$page.url.pathname === '/services'}>
 							<span class="nav-icon">
 								<svg
 									width="16"
@@ -103,11 +95,7 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a
-							href="/about"
-							class="nav-link"
-							class:active={$page.url.pathname === '/about'}
-						>
+						<a href="/about" class="nav-link" class:active={$page.url.pathname === '/about'}>
 							<span class="nav-icon">
 								<svg
 									width="16"
@@ -125,11 +113,7 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a
-							href="/contact"
-							class="nav-link"
-							class:active={$page.url.pathname === '/contact'}
-						>
+						<a href="/contact" class="nav-link" class:active={$page.url.pathname === '/contact'}>
 							<span class="nav-icon">
 								<svg
 									width="16"
@@ -282,7 +266,7 @@
 				</a>
 			</li>
 		</ul>
-		
+
 		<!-- Mobile CTA Button -->
 		<div class="mobile-nav-cta">
 			<a href="/contact" class="btn btn-primary mobile-cta-btn" on:click={closeMobileMenu}>
