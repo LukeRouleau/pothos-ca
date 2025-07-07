@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 
 	let scrolled = false;
 	let mobileMenuOpen = false;
@@ -33,8 +34,10 @@
 	}
 
 	// Close mobile menu on route change
-	$: if ($page.url.pathname && mobileMenuOpen) {
-		closeMobileMenu();
+	let currentPath = $page.url.pathname;
+	$: if ($page.url.pathname !== currentPath) {
+		currentPath = $page.url.pathname;
+		if (mobileMenuOpen) closeMobileMenu();
 	}
 </script>
 
@@ -53,15 +56,14 @@
 				</div>
 			</a>
 
-			<!-- Refined Navigation -->
-			<nav class="nav" class:open={mobileMenuOpen}>
+			<!-- Desktop Navigation -->
+			<nav class="nav desktop-nav">
 				<ul class="nav-list">
 					<li class="nav-item">
 						<a
 							href="/"
 							class="nav-link"
 							class:active={$page.url.pathname === '/'}
-							on:click={closeMobileMenu}
 						>
 							<span class="nav-icon">
 								<svg
@@ -84,7 +86,6 @@
 							href="/services"
 							class="nav-link"
 							class:active={$page.url.pathname === '/services'}
-							on:click={closeMobileMenu}
 						>
 							<span class="nav-icon">
 								<svg
@@ -106,7 +107,6 @@
 							href="/about"
 							class="nav-link"
 							class:active={$page.url.pathname === '/about'}
-							on:click={closeMobileMenu}
 						>
 							<span class="nav-icon">
 								<svg
@@ -129,7 +129,6 @@
 							href="/contact"
 							class="nav-link"
 							class:active={$page.url.pathname === '/contact'}
-							on:click={closeMobileMenu}
 						>
 							<span class="nav-icon">
 								<svg
@@ -180,9 +179,118 @@
 			on:keydown={(e) => e.key === 'Escape' && closeMobileMenu()}
 			role="button"
 			tabindex="0"
+			transition:fade={{ duration: 400 }}
 		></div>
 	{/if}
 </header>
+
+<!-- Mobile Navigation Menu -->
+<nav class="mobile-nav" class:open={mobileMenuOpen}>
+	<div class="mobile-nav-content">
+		<ul class="mobile-nav-list">
+			<li class="mobile-nav-item">
+				<a
+					href="/"
+					class="mobile-nav-link"
+					class:active={$page.url.pathname === '/'}
+					on:click={closeMobileMenu}
+				>
+					<span class="nav-icon">
+						<svg
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+							<polyline points="9,22 9,12 15,12 15,22" />
+						</svg>
+					</span>
+					<span class="nav-text">Home</span>
+				</a>
+			</li>
+			<li class="mobile-nav-item">
+				<a
+					href="/services"
+					class="mobile-nav-link"
+					class:active={$page.url.pathname === '/services'}
+					on:click={closeMobileMenu}
+				>
+					<span class="nav-icon">
+						<svg
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+						</svg>
+					</span>
+					<span class="nav-text">Services</span>
+				</a>
+			</li>
+			<li class="mobile-nav-item">
+				<a
+					href="/about"
+					class="mobile-nav-link"
+					class:active={$page.url.pathname === '/about'}
+					on:click={closeMobileMenu}
+				>
+					<span class="nav-icon">
+						<svg
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+							<circle cx="12" cy="7" r="4" />
+						</svg>
+					</span>
+					<span class="nav-text">About</span>
+				</a>
+			</li>
+			<li class="mobile-nav-item">
+				<a
+					href="/contact"
+					class="mobile-nav-link"
+					class:active={$page.url.pathname === '/contact'}
+					on:click={closeMobileMenu}
+				>
+					<span class="nav-icon">
+						<svg
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path
+								d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+							/>
+							<polyline points="22,6 12,13 2,6" />
+						</svg>
+					</span>
+					<span class="nav-text">Contact</span>
+				</a>
+			</li>
+		</ul>
+		
+		<!-- Mobile CTA Button -->
+		<div class="mobile-nav-cta">
+			<a href="/contact" class="btn btn-primary mobile-cta-btn" on:click={closeMobileMenu}>
+				Get Started
+			</a>
+		</div>
+	</div>
+</nav>
 
 <style>
 	/* Refined Header Styles */
@@ -191,7 +299,7 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		z-index: 1000;
+		z-index: 1004; /* Highest to stay above blur overlay */
 		background: rgba(248, 250, 249, 0.85);
 		backdrop-filter: blur(20px);
 		border-bottom: 1px solid rgba(117, 149, 132, 0.1);
@@ -266,8 +374,8 @@
 		line-height: 1;
 	}
 
-	/* Refined Navigation */
-	.nav {
+	/* Desktop Navigation */
+	.desktop-nav {
 		display: flex;
 		align-items: center;
 	}
@@ -397,12 +505,12 @@
 		height: 2px;
 		background: var(--color-forest-600);
 		border-radius: 2px;
-		transition: var(--transition-base);
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		transform-origin: center;
 	}
 
 	.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
-		transform: rotate(45deg) translate(3px, 3px);
+		transform: translateY(6px) rotate(45deg);
 	}
 
 	.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
@@ -411,27 +519,20 @@
 	}
 
 	.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
-		transform: rotate(-45deg) translate(3px, -3px);
+		transform: translateY(-6px) rotate(-45deg);
 	}
 
 	/* Mobile Overlay */
 	.mobile-overlay {
 		position: fixed;
-		top: 0;
+		top: 80px; /* Start below header */
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: rgba(0, 0, 0, 0.5);
+		background: rgba(0, 0, 0, 0.4);
 		z-index: 1001;
-		backdrop-filter: blur(4px);
-		opacity: 0;
-		animation: fadeIn 0.3s ease forwards;
-	}
-
-	@keyframes fadeIn {
-		to {
-			opacity: 1;
-		}
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
 	}
 
 	/* Hide mobile menu toggle on desktop */
@@ -440,16 +541,142 @@
 			display: none !important;
 		}
 
-		.nav {
+		.desktop-nav {
 			display: flex !important;
-			position: static !important;
-			transform: none !important;
-			opacity: 1 !important;
-			visibility: visible !important;
-			background: transparent !important;
-			box-shadow: none !important;
-			padding-top: 0 !important;
 		}
+	}
+
+	/* Mobile Navigation */
+	.mobile-nav {
+		position: fixed;
+		top: 80px; /* Position below header */
+		left: 0;
+		right: 0;
+		width: 100%;
+		background: var(--color-surface-elevated);
+		box-shadow: var(--shadow-lg);
+		z-index: 1003; /* Higher than overlay */
+		max-height: 0;
+		opacity: 0;
+		overflow: hidden;
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+		border-top: 1px solid var(--color-sage-200);
+		transform: translateY(-20px);
+	}
+
+	.mobile-nav.open {
+		max-height: 400px;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.mobile-nav-content {
+		padding: var(--space-6) var(--space-4);
+		opacity: 0;
+		transform: translateY(-10px);
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+	}
+
+	.mobile-nav.open .mobile-nav-content {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.mobile-nav-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-1);
+	}
+
+	.mobile-nav-item {
+		margin: 0;
+	}
+
+	.mobile-nav-link {
+		display: flex;
+		align-items: center;
+		gap: var(--space-3);
+		padding: var(--space-3) var(--space-4);
+		text-decoration: none;
+		color: var(--color-stone-700);
+		font-size: 1rem;
+		font-weight: 500;
+		transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+		border-radius: var(--radius-lg);
+		border: 1px solid transparent;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.mobile-nav-link::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(117, 149, 132, 0.1), transparent);
+		transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.mobile-nav-link:hover::before {
+		left: 100%;
+	}
+
+	.mobile-nav-link:hover,
+	.mobile-nav-link.active {
+		background: var(--color-sage-50);
+		color: var(--color-forest-700);
+		border-color: var(--color-sage-200);
+		transform: translateX(4px);
+	}
+
+	.mobile-nav-link .nav-icon {
+		display: flex;
+		align-items: center;
+		opacity: 0.8;
+		transition: var(--transition-base);
+	}
+
+	.mobile-nav-link:hover .nav-icon,
+	.mobile-nav-link.active .nav-icon {
+		opacity: 1;
+		transform: scale(1.1);
+	}
+
+	/* Mobile CTA Button */
+	.mobile-nav-cta {
+		margin-top: var(--space-6);
+		padding-top: var(--space-4);
+		border-top: 1px solid var(--color-sage-200);
+	}
+
+	.mobile-cta-btn {
+		width: 100%;
+		justify-content: center;
+		font-size: 1rem;
+		padding: var(--space-4) var(--space-6);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.mobile-cta-btn::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+		transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.mobile-cta-btn:hover::before {
+		left: 100%;
 	}
 
 	/* Responsive Design */
@@ -459,83 +686,44 @@
 		}
 
 		/* Hide desktop nav on mobile */
-		.nav {
+		.desktop-nav {
 			display: none;
-		}
-
-		.nav.open {
-			display: block;
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background: var(--color-surface-elevated);
-			padding-top: 80px;
-			box-shadow: var(--shadow-lg);
-			z-index: 1002;
-			overflow-y: auto;
-			/* Debug styles */
-			border: 3px solid red !important;
-		}
-
-		.nav-list {
-			flex-direction: column;
-			gap: var(--space-2);
-			padding: var(--space-6) var(--space-4);
-			width: 100%;
-			height: auto;
-			margin: 0;
-			list-style: none;
-			/* Debug styles */
-			background: yellow !important;
-		}
-
-		.nav-item {
-			width: 100%;
-			margin: 0;
-		}
-
-		.nav-link {
-			width: 100%;
-			justify-content: flex-start;
-			padding: var(--space-4) var(--space-6);
-			font-size: 1rem;
-			border-radius: var(--radius-md);
-			display: flex;
-			align-items: center;
-			text-decoration: none;
-			color: var(--color-stone-700);
-			background: transparent;
-			border: 1px solid transparent;
-			transition: all 0.3s ease;
-			position: relative;
-			overflow: visible;
-		}
-
-		.nav-link::before {
-			display: none;
-		}
-
-		.nav-link:hover,
-		.nav-link.active {
-			background: var(--color-sage-100);
-			transform: translateX(4px);
-			color: var(--color-forest-700);
-			border-color: var(--color-sage-200);
 		}
 
 		.header-cta {
 			display: none;
 		}
 
+		/* Keep logo text visible on mobile - there's plenty of room */
 		.logo-text {
-			display: none;
+			display: flex;
+		}
+
+		/* Slightly reduce logo text size on mobile for better fit */
+		.logo-name {
+			font-size: 1.25rem;
+		}
+
+		.logo-tagline {
+			font-size: 0.65rem;
 		}
 
 		.logo-icon img {
 			width: 36px;
 			height: 36px;
+		}
+
+		/* Mobile nav adjustments */
+		.mobile-nav {
+			top: 76px; /* Adjust for mobile header height */
+		}
+
+		.mobile-overlay {
+			top: 76px; /* Match mobile header height */
+		}
+
+		.mobile-nav.open {
+			max-height: 380px;
 		}
 	}
 
@@ -544,12 +732,43 @@
 			padding: var(--space-3) 0;
 		}
 
-		.nav-list {
-			padding: var(--space-4);
+		.mobile-nav {
+			top: 68px; /* Adjust for smaller header on mobile */
 		}
 
-		.nav-link {
+		.mobile-overlay {
+			top: 68px; /* Match smaller header height */
+		}
+
+		.mobile-nav-content {
+			padding: var(--space-4) var(--space-3);
+		}
+
+		.mobile-nav-link {
+			font-size: 0.95rem;
+			padding: var(--space-2) var(--space-3);
+		}
+
+		.mobile-nav.open {
+			max-height: 360px;
+		}
+
+		.mobile-cta-btn {
 			padding: var(--space-3) var(--space-4);
+		}
+
+		/* Further reduce logo on very small screens */
+		.logo-name {
+			font-size: 1.1rem;
+		}
+
+		.logo-tagline {
+			font-size: 0.6rem;
+		}
+
+		.logo-icon img {
+			width: 32px;
+			height: 32px;
 		}
 	}
 </style>
